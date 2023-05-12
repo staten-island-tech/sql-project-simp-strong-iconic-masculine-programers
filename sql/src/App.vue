@@ -12,17 +12,24 @@ async function getCR() {
 
 onMounted (() => {
   getCR()
-})
+})  
 
 </script>
 
 <template>
-      <nav>
+  <!--
+    <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
 
   <RouterView />
+   -->
+   
+   <ul>
+    <li v-for="card in hehehehaw" :key="card.id">{{ card.name }} - {{ card.rarity }}</li>
+   </ul>
+   
 </template>
 
 <style scoped>
