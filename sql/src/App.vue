@@ -2,33 +2,35 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { ref, onMounted } from 'vue'
 import { supabase } from './lib/sbClient'
+import { createApp } from 'vue'
+
+const app = createApp({})
 
 const hehehehaw = ref([])
 
 async function getCR() {
   const { data } = await supabase.from('hehehehaw').select()
   hehehehaw.value = data
+  console.log(hehehehaw.value)
 }
+
+
 
 onMounted (() => {
   getCR()
-})  
+})
+
+
 
 </script>
 
 <template>
-  <!--
     <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
 
   <RouterView />
-   -->
-   
-   <ul>
-    <li v-for="card in hehehehaw" :key="card.id">{{ card.name }} - {{ card.rarity }}</li>
-   </ul>
    
 </template>
 

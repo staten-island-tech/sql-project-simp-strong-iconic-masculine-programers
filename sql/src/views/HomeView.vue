@@ -1,4 +1,7 @@
 <script setup>
+  import Database from '../App.vue'
+
+
 </script>
 
 <template>
@@ -6,7 +9,8 @@
     Who needs styling
 
     <ul>
-      <li v-for="card in hehehehaw" :key="card.id">{{ this.$parent.card.name }}</li>
+      <li v-for="card in Database" :key="card.id">{{ card.name }}</li>
     </ul>
+
   </header>
 </template>
