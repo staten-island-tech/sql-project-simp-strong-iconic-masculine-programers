@@ -11,14 +11,7 @@ const hehehehaw = ref([])
 async function getCR() {
   const { data } = await supabase.from('hehehehaw').select()
   hehehehaw.value = data
-  console.log(hehehehaw.value)
 }
-
-
-
-onMounted (() => {
-  getCR()
-})
 
 
 

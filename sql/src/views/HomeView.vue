@@ -1,6 +1,19 @@
 <script setup>
-  import Database from '../App.vue'
+  import { supabase } from '../lib/sbClient'
+  import { onMounted, ref, toRefs } from 'vue'
+  import { defineStore } from 'pinia'
 
+  const Database = ref([])
+
+  async function getCR() {
+  const { data } = await supabase.from('hehehehaw').select()
+  hehehehaw.value = data
+}
+
+
+onMounted (() => {
+  getCR()
+})
 
 </script>
 
