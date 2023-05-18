@@ -1,19 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import { ref, onMounted } from 'vue'
-import { supabase } from './lib/sbClient'
-import { createApp } from 'vue'
-
-const app = createApp({})
-
-const hehehehaw = ref([])
-
-async function getCR() {
-  const { data } = await supabase.from('hehehehaw').select()
-  hehehehaw.value = data
-}
-
-
 
 </script>
 

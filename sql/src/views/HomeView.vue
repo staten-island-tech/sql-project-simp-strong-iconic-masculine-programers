@@ -7,7 +7,7 @@
 
   async function getCR() {
   const { data } = await supabase.from('hehehehaw').select()
-  hehehehaw.value = data
+  Database.value = data
 }
 
 
