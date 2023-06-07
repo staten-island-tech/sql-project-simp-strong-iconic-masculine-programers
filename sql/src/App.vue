@@ -2,7 +2,7 @@
   <RouterView />
 </template>
 <script setup>
-import { RouterLink, RouterView, useRouter } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 import { onMounted, ref, watch } from 'vue'
 import { supabase } from './lib/supabaseClient'
 import { storage } from './store/pinia'
